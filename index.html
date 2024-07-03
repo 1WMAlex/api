@@ -32,7 +32,7 @@
             color: #d84315;
         }
         pre {
-            background: #e7e7e7;
+            background: #ebebeb;
             padding: 10px;
             border-radius: 4px;
             overflow-x: auto;
@@ -65,13 +65,20 @@ Header: api-key: your_api_key</pre>
             <pre>[
     {
         "id": 1,
-        "username": "Stratfod",
-        "password": "TEMPPASSWORD$42",
-        "banking_id": "bank_username",
-        "card_number": "4058912241567600",
-        "balance": "92561887.38"
+        "username": "example_user1",
+        "password": "example_password1",
+        "banking_id": "example_banking_id1",
+        "card_number": "1234567812345678",
+        "balance": "1000.00"
     },
-    ...
+    {
+        "id": 2,
+        "username": "example_user2",
+        "password": "example_password2",
+        "banking_id": "example_banking_id2",
+        "card_number": "8765432187654321",
+        "balance": "2000.00"
+    }
 ]</pre>
         </div>
 
@@ -87,11 +94,11 @@ Header: api-key: your_api_key</pre>
             <h3>Response</h3>
             <pre>{
     "id": 1,
-    "username": "Stratfod",
-    "password": "TEMPPASSWORD$42",
-    "banking_id": "bank_username",
-    "card_number": "4058912241567600",
-    "balance": "92561887.38"
+    "username": "example_user1",
+    "password": "example_password1",
+    "banking_id": "example_banking_id1",
+    "card_number": "1234567812345678",
+    "balance": "1000.00"
 }</pre>
         </div>
 
@@ -106,7 +113,7 @@ Header: api-key: your_api_key</pre>
 Header: api-key: your_api_key</pre>
             <h3>Response</h3>
             <pre>{
-    "balance": "92561887.38"
+    "balance": "1000.00"
 }</pre>
         </div>
 
@@ -121,7 +128,7 @@ Header: api-key: your_api_key</pre>
 Header: api-key: your_api_key</pre>
             <h3>Response</h3>
             <pre>{
-    "banking_id": "bank_username"
+    "banking_id": "example_banking_id1"
 }</pre>
         </div>
 
