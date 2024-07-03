@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Documentation - GunGens Guardian Bank</title>
+    <title>API Documentation - The Guardian Bank</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #fff8e1;
             color: #333;
             margin: 0;
             padding: 0;
@@ -23,16 +23,16 @@
             margin-top: 20px;
         }
         h1, h2, h3 {
-            color: #0077b6;
+            color: #ff7043;
         }
         code {
-            background: #eee;
+            background: #ffe0b2;
             padding: 2px 4px;
             border-radius: 4px;
-            color: #c7254e;
+            color: #d84315;
         }
         pre {
-            background: #eee;
+            background: #e7e7e7;
             padding: 10px;
             border-radius: 4px;
             overflow-x: auto;
@@ -49,8 +49,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>API Documentation - GunGens Bank System</h1>
-        <p>Welcome to the API documentation for The Guardian Bank System. Below you will find the available endpoints, their purposes, request formats, and response formats.</p>
+        <h1>API Documentation - The Guardian Bank</h1>
+        <p>Welcome to the API documentation for The Guardian Bank. Below you will find the available endpoints, their purposes, request formats, and response formats.</p>
 
         <div class="endpoint">
             <h2>List All Users</h2>
@@ -62,16 +62,17 @@
             <pre>GET /v1/users
 Header: api-key: your_api_key</pre>
             <h3>Response</h3>
-            <pre>{
-    "users": [
-        {
-            "username": "john_doe",
-            "balance": 1000,
-            "banking_id": "jdoe123"
-        },
-        ...
-    ]
-}</pre>
+            <pre>[
+    {
+        "id": 1,
+        "username": "Stratfod",
+        "password": "TEMPPASSWORD$42",
+        "banking_id": "bank_username",
+        "card_number": "4058912241567600",
+        "balance": "92561887.38"
+    },
+    ...
+]</pre>
         </div>
 
         <div class="endpoint">
@@ -85,9 +86,12 @@ Header: api-key: your_api_key</pre>
 Header: api-key: your_api_key</pre>
             <h3>Response</h3>
             <pre>{
-    "username": "john_doe",
-    "balance": 1000,
-    "banking_id": "jdoe123"
+    "id": 1,
+    "username": "Stratfod",
+    "password": "TEMPPASSWORD$42",
+    "banking_id": "bank_username",
+    "card_number": "4058912241567600",
+    "balance": "92561887.38"
 }</pre>
         </div>
 
@@ -102,7 +106,7 @@ Header: api-key: your_api_key</pre>
 Header: api-key: your_api_key</pre>
             <h3>Response</h3>
             <pre>{
-    "balance": 1000
+    "balance": "92561887.38"
 }</pre>
         </div>
 
@@ -117,7 +121,7 @@ Header: api-key: your_api_key</pre>
 Header: api-key: your_api_key</pre>
             <h3>Response</h3>
             <pre>{
-    "banking_id": "jdoe123"
+    "banking_id": "bank_username"
 }</pre>
         </div>
 
