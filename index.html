@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation - GunGens Guardian Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1, h2, h3 {
+            color: #0077b6;
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            color: #c7254e;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        .endpoint {
+            margin-bottom: 40px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>API Documentation - GunGens Bank System</h1>
+        <p>Welcome to the API documentation for The Guardian Bank System. Below you will find the available endpoints, their purposes, request formats, and response formats.</p>
+
+        <div class="endpoint">
+            <h2>List All Users</h2>
+            <h3>Endpoint</h3>
+            <p><code>GET /v1/users</code></p>
+            <h3>Description</h3>
+            <p>Retrieves a list of all users.</p>
+            <h3>Request</h3>
+            <pre>GET /v1/users
+Header: api-key: your_api_key</pre>
+            <h3>Response</h3>
+            <pre>{
+    "users": [
+        {
+            "username": "john_doe",
+            "balance": 1000,
+            "banking_id": "jdoe123"
+        },
+        ...
+    ]
+}</pre>
+        </div>
+
+        <div class="endpoint">
+            <h2>Get User Information</h2>
+            <h3>Endpoint</h3>
+            <p><code>GET /v1/user/:player_name</code></p>
+            <h3>Description</h3>
+            <p>Retrieves information about a specific user.</p>
+            <h3>Request</h3>
+            <pre>GET /v1/user/:player_name
+Header: api-key: your_api_key</pre>
+            <h3>Response</h3>
+            <pre>{
+    "username": "john_doe",
+    "balance": 1000,
+    "banking_id": "jdoe123"
+}</pre>
+        </div>
+
+        <div class="endpoint">
+            <h2>Get User Balance</h2>
+            <h3>Endpoint</h3>
+            <p><code>GET /v1/user/:player_name/balance</code></p>
+            <h3>Description</h3>
+            <p>Retrieves the balance of a specific user.</p>
+            <h3>Request</h3>
+            <pre>GET /v1/user/:player_name/balance
+Header: api-key: your_api_key</pre>
+            <h3>Response</h3>
+            <pre>{
+    "balance": 1000
+}</pre>
+        </div>
+
+        <div class="endpoint">
+            <h2>Get User Bank Username</h2>
+            <h3>Endpoint</h3>
+            <p><code>GET /v1/user/:player_name/bank_username</code></p>
+            <h3>Description</h3>
+            <p>Retrieves the bank username of a specific user.</p>
+            <h3>Request</h3>
+            <pre>GET /v1/user/:player_name/bank_username
+Header: api-key: your_api_key</pre>
+            <h3>Response</h3>
+            <pre>{
+    "banking_id": "jdoe123"
+}</pre>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 The Guardian Bank. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
