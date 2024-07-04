@@ -133,8 +133,13 @@ Header: api-key: your_api_key</pre>
         </div>
 
         <div class="footer">
-            <p>&copy; 2024 The Guardian Bank. All rights reserved.</p>
+            <p>&copy; <span id="year">2024</span> GunGens. All rights reserved.</p>
         </div>
     </div>
+    <script>
+        var d = new Date();
+    
+        document.getElementById("year").innerText=d.getFullYear;
+    </script>
 </body>
 </html>
