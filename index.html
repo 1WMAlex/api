@@ -49,7 +49,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>API Documentation - The Guardian Bank</h1>
+        <h1>API Documentation - GunGens Guardian Bank</h1>
         <p>Welcome to the API documentation for The Guardian Bank. Below you will find the available endpoints, their purposes, request formats, and response formats.</p>
 
         <div class="endpoint">
@@ -131,15 +131,24 @@ Header: api-key: your_api_key</pre>
     "banking_id": "example_banking_id1"
 }</pre>
         </div>
+        <div class="endpoint">
+            <h2>Get User Bank Card Information</h2>
+            <h3>Endpoint</h3>
+            <p><code>GET /v1/user/:player_name/card</code></p>
+            <h3>Description</h3>
+            <p>Retrieves the bank username of a specific user.</p>
+            <h3>Request</h3>
+            <pre>GET /v1/user/:player_name/card
+Header: api-key: your_api_key</pre>
+            <h3>Response</h3>
+            <pre>{
+    "card_number": "4058xxxxxxxxxxxx"
+}</pre>
+        </div>
 
         <div class="footer">
-            <p>&copy; <span id="year">2024</span> GunGens. All rights reserved.</p>
+            <p>&copy; 2024 GunGens. All rights reserved.</p>
         </div>
     </div>
-    <script>
-        var d = new Date();
-    
-        document.getElementById("year").innerText=d.getFullYear();
-    </script>
 </body>
 </html>
